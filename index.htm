@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WaveWeather</title>
+</head>
+<body>
+    <section id="result">
+        <div class="wrapper">
+            <div class="leftPart">
+                <div class="upPart">
+                    <div class="logo"></div>
+                </div>
+
+                <div class="bottomPart">
+                    <div class="degree">
+                        <span id="temperature">—</span>
+                    </div>
+
+                    <div class="cityInfo">
+                        <div class="cityInfoL">
+                            <div class="cityName" id="cityName">—</div>
+                            <div class="dataTime">Обновлено: <span id="updated">—</span></div>
+                        </div>
+
+                        <div class="cityInfoR">
+                            <span id="weatherEmoji" class="weatherEmoji"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rightPart">
+                <div class="rPartContainer">
+                    <div>
+                        <div class="search">
+                            <input
+                                class="searchInp"
+                                id="cityInput"
+                                placeholder="Введите город (например, Bishkek)"
+                            />
+                            <button class="searchButton" id="searchBtn"></button>
+                        </div>
+
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="infoP">Информация о дне:</div>
+
+                    <div class="infoContainer">
+                        <div class="infoRow1"><span>Ветер:</span><span><span id="wind">—</span> м/с</span></div>
+                        <div class="infoRow2"><span>Влажность:</span> <span><span id="humidity">—</span>%</span></div>
+                        <div class="infoRow3"><span>Часовой пояс:</span> <span><span id="timezone">—</span></span></div>
+                    </div>
+
+                    <div class="infoP2">Погода на неделю:</div>
+                    <div id="forecast" class="forecast"></div>
+
+                    <div id="error" class="error hidden"></div>
+                </div>
+            </div>
+        </div>
+
+        <span class="hide" id="weatherText"></span>
+    </section>
+    <div id="loader" class="hidden">
+        <div class="spinner"></div>
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>
