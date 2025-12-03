@@ -82,11 +82,10 @@ div{
     height: 100%;
     width: auto;
     display: flex;
-
 }
 
 .cityInfoL{
-    width: 220px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,7 +93,7 @@ div{
 }
 
 .cityName{
-    font-size: 40px;
+    font-size: 50px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: normal;
     margin: 0;
@@ -115,6 +114,7 @@ div{
     height: 100%;
     display: flex;
     align-items: center;
+
 
 }
 
@@ -273,17 +273,24 @@ input:focus {
 
 @media (max-width: 1023px) and (min-width: 600px) {
 
-    .wrapper {
+    .wrapper{
+        display: flex;
         flex-direction: column;
         height: auto;
+        gap: 60px;
+    }
+    .cityName{
+        font-size: 48px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: normal;
+        margin: 0;
+        color: white;
     }
 
     .leftPart {
         width: 100%;
         height: 60vh;
         padding: 5vh 5vw;
-        justify-content: flex-start;
-        align-items: flex-start;
     }
 
     .rPartContainer{
@@ -298,7 +305,7 @@ input:focus {
     }
 
     .degree {
-        font-size: 100px;
+        font-size: 120px;
     }
 
     .rightPart {
@@ -308,15 +315,27 @@ input:focus {
         margin-top: -40px;
         background: rgba(0,0,0,0.35);
         backdrop-filter: blur(20px);
-        border-radius: 20px 20px 0 0;
+    }
+
+    .search {
+        position: absolute;
+        top: 20px;      
+        right: 20px;   
+        width: auto;
+        z-index: 10;    
+    }
+
+    .rPartContainer {
+        margin-top: 60px; 
     }
 }
 
-/* ------------------------------- */
-/*   PHONE (≤ 599px)              */
-/* ------------------------------- */
-@media (max-width: 599px) {
 
+@media (max-width: 599px) {
+    .search {
+        top: 15px;     
+        right: 15px;
+    }
     .wrapper {
         flex-direction: column;
         height: auto;
@@ -326,8 +345,7 @@ input:focus {
         width: 100%;
         height: 45vh;
         padding: 3vh 5vw;
-        justify-content: flex-end;
-        align-items: flex-start;
+        justify-content: space-between;
     }
 
     .rPartContainer{
@@ -351,7 +369,6 @@ input:focus {
         padding: 30px 6vw;
         background: rgba(0,0,0,0.4);
         backdrop-filter: blur(20px);
-        border-radius: 25px 25px 0 0;
         margin-top: -20px;
     }
 
@@ -371,12 +388,16 @@ input:focus {
         font-size: 14px;
         gap: 12px;
     }
-}
-
-@media (max-width: 430px) {
+    .weatherEmoji{
+        font-size: 40px;
+    }
     .bottomPart{
         width: 100%;
-        flex-direction: column;
+    }
+
+        .bottomPart{
+        width: 100%;
+        height: auto;
         gap: 10px;
     }
 
@@ -384,13 +405,71 @@ input:focus {
         width: 100%;
         height: 50vh;
         padding: 3vh 5vw;
-        justify-content: flex-end;
-        align-items: flex-start;
+        justify-content: space-between;
     }
     .wrapper{
         display: flex;
         flex-direction: column;
         gap: 60px;
+    }
+    .weatherEmoji{
+        font-size: 70px;
+    }
+    .cityName{
+        font-size: 30px;
+        width: auto;
+    }
+    .degree{
+        font-size: 82px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .dataTime{
+        font-size: 10px;
+    }
+    .cityInfoL{
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .bottomPart{
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .leftPart {
+        width: 100%;
+        height: 50vh;
+        padding: 3vh 5vw;
+        justify-content: space-between;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .weatherEmoji{
+        font-size: 70px;
+    }
+    .cityName{
+        font-size: 30px;
+        width: auto;
+    }
+    .degree{
+        font-size: 82px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .dataTime{
+        font-size: 10px;
+    }
+    .cityInfoL{
+        width: 60%;
     }
 
 }
