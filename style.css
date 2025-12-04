@@ -317,16 +317,19 @@ input:focus {
         backdrop-filter: blur(20px);
     }
 
-    .search {
-        position: absolute;
-        top: 20px;      
-        right: 20px;   
-        width: auto;
-        z-index: 10;    
-    }
-
     .rPartContainer {
         margin-top: 60px; 
+    }
+
+    .search{
+        width: 60%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .line{
+        width: 60%;
     }
 }
 
